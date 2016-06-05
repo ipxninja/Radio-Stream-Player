@@ -12,6 +12,9 @@
 		16AB69241D02E48100D64814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AB69221D02E48100D64814 /* Main.storyboard */; };
 		16AB69261D02E48100D64814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AB69251D02E48100D64814 /* Assets.xcassets */; };
 		16AB69291D02E48100D64814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AB69271D02E48100D64814 /* LaunchScreen.storyboard */; };
+		16AB69311D02E4E500D64814 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB69301D02E4E500D64814 /* RadioPlayer.swift */; };
+		16AB69341D02E54200D64814 /* main-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 16AB69331D02E54200D64814 /* main-logo.png */; };
+		16AB69361D02E54D00D64814 /* new_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16AB69351D02E54D00D64814 /* new_logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		16AB69251D02E48100D64814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16AB69281D02E48100D64814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16AB692A1D02E48100D64814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16AB69301D02E4E500D64814 /* RadioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
+		16AB69331D02E54200D64814 /* main-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-logo.png"; sourceTree = "<group>"; };
+		16AB69351D02E54D00D64814 /* new_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = new_logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		16AB69121D02E48100D64814 = {
 			isa = PBXGroup;
 			children = (
+				16AB69321D02E53200D64814 /* Images */,
 				16AB691D1D02E48100D64814 /* Megapolis.FM 89.5 */,
 				16AB691C1D02E48100D64814 /* Products */,
 			);
@@ -56,12 +63,22 @@
 			children = (
 				16AB691E1D02E48100D64814 /* AppDelegate.swift */,
 				16AB69201D02E48100D64814 /* ViewController.swift */,
+				16AB69301D02E4E500D64814 /* RadioPlayer.swift */,
 				16AB69221D02E48100D64814 /* Main.storyboard */,
 				16AB69251D02E48100D64814 /* Assets.xcassets */,
 				16AB69271D02E48100D64814 /* LaunchScreen.storyboard */,
 				16AB692A1D02E48100D64814 /* Info.plist */,
 			);
 			path = "Megapolis.FM 89.5";
+			sourceTree = "<group>";
+		};
+		16AB69321D02E53200D64814 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				16AB69351D02E54D00D64814 /* new_logo.jpg */,
+				16AB69331D02E54200D64814 /* main-logo.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +113,12 @@
 				TargetAttributes = {
 					16AB691A1D02E48100D64814 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YAB86BQ5ZF;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,6 +148,8 @@
 				16AB69291D02E48100D64814 /* LaunchScreen.storyboard in Resources */,
 				16AB69261D02E48100D64814 /* Assets.xcassets in Resources */,
 				16AB69241D02E48100D64814 /* Main.storyboard in Resources */,
+				16AB69361D02E54D00D64814 /* new_logo.jpg in Resources */,
+				16AB69341D02E54200D64814 /* main-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AB69311D02E4E500D64814 /* RadioPlayer.swift in Sources */,
 				16AB69211D02E48100D64814 /* ViewController.swift in Sources */,
 				16AB691F1D02E48100D64814 /* AppDelegate.swift in Sources */,
 			);
@@ -249,9 +275,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Megapolis.FM 89.5/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pavelbondarenko.Megapolis-FM-89-5";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelbondarenko.megapolisfm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -260,9 +287,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Megapolis.FM 89.5/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pavelbondarenko.Megapolis-FM-89-5";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelbondarenko.megapolisfm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

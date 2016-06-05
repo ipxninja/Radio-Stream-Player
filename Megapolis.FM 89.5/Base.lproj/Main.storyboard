@@ -1,25 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zRf-1C-NQV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="vDs-eg-hu7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zRf-1C-NQV" customClass="ViewController" customModule="Megapolis_FM_89_5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="9du-HT-Cme"/>
+                        <viewControllerLayoutGuide type="bottom" id="BmC-XR-gEp"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="efw-Nl-XQT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IRJ-hz-O78">
+                                <rect key="frame" x="52" y="55" width="216" height="294"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odb-LS-aFH">
+                                <rect key="frame" x="109" y="368" width="102" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Utd-74-5ii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play Radio">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playStream:" destination="zRf-1C-NQV" eventType="touchUpInside" id="X5u-0R-u60"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Odb-LS-aFH" firstAttribute="top" secondItem="IRJ-hz-O78" secondAttribute="bottom" constant="19" id="0BV-9l-4Pi"/>
+                            <constraint firstItem="Odb-LS-aFH" firstAttribute="leading" secondItem="efw-Nl-XQT" secondAttribute="leadingMargin" constant="93" id="11F-Cd-jLX"/>
+                            <constraint firstItem="IRJ-hz-O78" firstAttribute="centerX" secondItem="Odb-LS-aFH" secondAttribute="centerX" id="PXy-b2-kep"/>
+                            <constraint firstItem="IRJ-hz-O78" firstAttribute="centerX" secondItem="efw-Nl-XQT" secondAttribute="centerX" id="PhC-X7-ziC"/>
+                            <constraint firstItem="IRJ-hz-O78" firstAttribute="leading" secondItem="efw-Nl-XQT" secondAttribute="leadingMargin" constant="36" id="YBh-Na-2la"/>
+                            <constraint firstItem="BmC-XR-gEp" firstAttribute="top" secondItem="Odb-LS-aFH" secondAttribute="bottom" constant="173" id="cnG-Tt-w1a"/>
+                            <constraint firstItem="IRJ-hz-O78" firstAttribute="top" secondItem="9du-HT-Cme" secondAttribute="bottom" constant="35" id="lyj-re-8vp"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="playStream" destination="Odb-LS-aFH" id="glg-0I-iFQ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cD-2y-Dlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="169"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="main-logo.png" width="489" height="695"/>
+    </resources>
 </document>
